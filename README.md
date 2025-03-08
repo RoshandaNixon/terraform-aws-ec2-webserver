@@ -1,10 +1,10 @@
-# Deploy AWS EC2 Ubuntu Webserver using Terraform
+# Deploy an AWS EC2 Ubuntu Web Server using Terraform
 
 ## Overview
-Quickly and efficiently deploy an EC2 Ubuntu Webserver to the AWS Cloud platform with all the essential componets for full functionality, including: VPC, a custom Route Table, Security Group and rules, subnet, Public IP, and more. 
+Quickly and efficiently deploy an EC2 Ubuntu Web Server to the AWS Cloud platform with all the essential network components for full functionality - including: a VPC, a custom Route Table, Security Group and rules, Subnet, Public IP, and more. 
 
 ## Features
-- **Auto Assign Public IP** Create and assign EIP to webserver
+- **Auto Assign Public IP** Create and assign EIP to the web server
 - **Ingress and Egress Traffic Rules** Allow HTTP, HTTPS, and SSH
 - **Custom Route Table** Create a custom Route Table and Internet Gateway
 
@@ -12,7 +12,7 @@ Quickly and efficiently deploy an EC2 Ubuntu Webserver to the AWS Cloud platform
 - Terraform 1.x
 - AWS account with appropriate permissions
 - AWS CLI configured with AWS Credentials
-- Key Pair to assign to EC2 for connection
+- Key Pair to assign to EC2 for SSH connection
 
 ## Installation
 1. **Clone the Repository**
@@ -25,7 +25,7 @@ Run the script using Terraform commands:
 
 The script will provision an Ubuntu EC2 instance within its own VPC along with the necessary network configurations to allow immediate connection using SSH, HTTP, and HTTPS.
 
-## Steps
+## Steps to Configure Infrastructure
 
 1. **Configure the AWS Provider:**
    - Add the AWS Provider block and set your preferred region
@@ -95,6 +95,25 @@ The script will provision an Ubuntu EC2 instance within its own VPC along with t
    - Note: You may have to manually install Apache2 once you're connected via SSH if `user_data` did not execute.
 
 
+## Steps to Deploy using Terraform Commands
+
+1. **Initialize your main.tf file:**
+   `terraform init`
+   - This command will download the necessary plugins and code for the AWS Provider.
+
+2. **Perform a Dry Run:**
+   `terraform plan`
+   - This command will provide a preview of what resources that will be provisioned.
+   - Note: You will also be shown any errors that you may need to troubleshoot. 
+
+3. **Provision the resources in AWS:**
+   `terraform apply`
+   - This command will deploy the resouces configured in your main.tf file.
+
+4. **Delete Resources:**
+   `terraform destroy`
+   - (Optional) Delete all the resources to prevent from incurring costs if this project is for testing purposes only. 
+
 ## Customization
 This script is highly customizable to your needs. Feel free to change the ami (image), ports opened, and to only allow your IP for SSH connection, etc.
 
@@ -103,6 +122,9 @@ Tags are reflected in the AWS console. However the resource names are only used 
 
 ## Known Issues
 Apache2 installation script may not run after EC2 is created. Please free to contribute a fix if you are aware of one. 
+
+## Reference
+Terraform documentation - https://registry.tf-registry-prod-use1.terraform.io/providers/hashicorp/aws/latest/docs
 
 ## License
 This project is licensed under None.
