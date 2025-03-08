@@ -78,6 +78,18 @@ The script will provision an Ubuntu EC2 instance within its own VPC along with t
    - Tie the EIP to the Private IP.
    - Reference the IGW resource (not id) [required]
    - Note: AWS EIP relies on the deployment of the IGW. You will be unable to assign EIP to a device that doesn't have an IGW.
+9. **Assign an Elastic IP (Public IP) to the Network Interface Created in Step 8:**
+   - Provide a name for the resource.
+   - Specify the VPC and associate EIP with the Network Interface.
+   - Tie the EIP to the Private IP.
+   - Reference the IGW resource (not id) [required]
+   - Note: AWS EIP relies on the deployment of the IGW. You will be unable to assign EIP to a device that doesn't have an IGW.
+9. **Assign an Elastic IP (Public IP) to the Network Interface Created in Step 8:**
+   - Provide a name for the resource.
+   - Specify the VPC and associate EIP with the Network Interface.
+   - Tie the EIP to the Private IP.
+   - Reference the IGW resource (not id) [required]
+   - Note: AWS EIP relies on the deployment of the IGW. You will be unable to assign EIP to a device that doesn't have an IGW.
   
 10. **Create an Ubuntu EC2 Instance and Install Apache2:**
    - Provide a name for the resource.
