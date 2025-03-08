@@ -1,4 +1,4 @@
-# Deploy an AWS EC2 Ubuntu Web Server using Terraform
+# Use Terraform to Deploy AWS EC2 Web Server Infrastructure
 
 ## Overview
 Quickly and efficiently deploy an EC2 Ubuntu Web Server to the AWS Cloud platform with all the essential network components for full functionality - including: a VPC, a custom Route Table, Security Group and rules, Subnet, Public IP, and more. 
