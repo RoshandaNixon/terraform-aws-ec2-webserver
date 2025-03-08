@@ -76,16 +76,16 @@ The script will provision an Ubuntu EC2 instance within its own VPC along with t
    - Provide a name for the resource.
    - Specify the VPC and associate EIP with the Network Interface.
    - Tie the EIP to the Private IP.
-   - Reference the IGW resource (not id) [required]
+   - Reference the entire IGW resource (not id) - REQUIRED
    - Note: AWS EIP relies on the deployment of the IGW. You will be unable to assign EIP to a device that doesn't have an IGW.
 10. **Create an Ubuntu EC2 Instance and Install Apache2:**
    - Provide a name for the resource.
    - Enter the Ubuntu ami (or your desired image) - you must retrieve this from the AWS Console.
    - Choose your desired instance type.
-   - Enter the the Availability Zone specified in the Subnet created in Step 5 (required).
+   - Enter the the Availability Zone specified in the Subnet created in Step 5 - REQUIRED.
    - Specify your key pair name (.ppk or .pem file)
    - Within the code block, associate the Network Interface to the instance and specify the first network interface `device_index = 0`
-   - Withn the code block, create a script that will install Apache2.
+   - Within the code block, create a script that will install Apache2.
    - Add a Name tag for the instance.
      
 11. **Connect to the Web Server and Test:**
