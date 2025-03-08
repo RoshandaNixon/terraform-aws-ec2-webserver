@@ -114,7 +114,7 @@ The script will provision an Ubuntu EC2 instance within its own VPC along with t
    - Delete all the resources to prevent from incurring costs if this project is for testing purposes only. 
 
 ## Customization
-This script is highly customizable to your needs. Feel free to change the ami (image), ports opened, and to only allow your IP for SSH connection, etc. Note: Tags are reflected in the AWS console. However the resource names are only used within Terraform for reference. 
+This script is highly customizable to your needs. Feel free to change the ami (image), ports numbers, increase resources, etc. Note: Tags are reflected in the AWS console. However the resource names are only used within Terraform for reference. 
 
 ## Known Issues
 Apache2 installation script may not run after EC2 is created. Please free to contribute a fix if you are aware of one. 
